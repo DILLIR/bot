@@ -84,7 +84,7 @@ async function main (){
  function sendMessage(chatId){
     for(let order of orders){
         if(!order.sended){
-            let orderText = `📘 ${order.title}\n\n${order.desc}\n\n💰 ${order.price}     🇺${order.type}`;
+            let orderText = `📘 ${order.title}\n\n${order.desc}\n\n💰 ${order.price}     💼 ${order.type}`;
             var options = {
                 reply_markup: JSON.stringify({
                 inline_keyboard: [
