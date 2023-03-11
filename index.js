@@ -2,11 +2,15 @@ const TelegramBot = require('node-telegram-bot-api');
 const fs = require('fs');
 const cheerio = require('cheerio');
 const axios = require("axios");
+const dotenv = require('dotenv');
 
-let user = 535578973;
+dotenv.config();
+const { TELEGRAM_TOKEN, TELEGRAM_USER } = process.env;
+
+let user = TELEGRAM_USER;
 
 // replace the value below with the Telegram token you receive from @BotFather
-const token = '5448109960:AAE9kI67310pQXw7L3JTfSZMZC9yKr7ehdY';
+const token = TELEGRAM_TOKEN;
 
 // Create a bot that uses 'polling' to fetch new updates
 const bot = new TelegramBot(token, {polling: true});
